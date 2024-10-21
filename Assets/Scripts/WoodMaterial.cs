@@ -1,18 +1,53 @@
+using Microsoft.Unity.VisualStudio.Editor;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WoodMaterial : MonoBehaviour
+public class WoodMaterial : Material
 {
-    // Start is called before the first frame update
-    void Start()
+    private float scaling = 1;
+    [SerializeField] private float maxScaling;
+    private bool isBurning = false;
+    private bool isGrowing = false;
+
+    private void Update()
+    {
+        if (isGrowing && scaling < maxScaling)
+        {
+            scaling += Time.deltaTime;
+        }
+        if (isBurning)
+        {
+
+            scaling -= Time.deltaTime;
+            if (scaling <= 0)
+            {
+                Destroy(gameObject);
+            }
+        
+        }
+
+    
+    }
+
+
+    private void Burning()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void OnPlant()
     {
-        
+        if (!isBurning)
+        {
+            isGrowing = true;
+        }
     }
+
+    protected override void OnIce()
+    {
+        isGrowing = false;
+    }
+
+
 }

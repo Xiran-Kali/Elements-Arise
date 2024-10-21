@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Spell : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private int temperature;
+    [SerializeField] private int humidity;
+    [SerializeField] private float speed;
 
-    // Update is called once per frame
-    void Update()
+
+    public void Catch(ObjectData data)
     {
-        
+
     }
 }
