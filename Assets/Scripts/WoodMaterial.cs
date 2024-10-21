@@ -26,7 +26,8 @@ public class WoodMaterial : Material
             }
         
         }
-        gameObject.transform.localScale = scaling * gameObject.transform.lossyScale;
+        gameObject.transform.localScale = new Vector3(1, scaling, 1);
+
     
     }
 
@@ -35,6 +36,7 @@ public class WoodMaterial : Material
     {
         base.Burning(data);
         isBurning = true;
+        Debug.Log(isBurning);
     }
 
     public override void OnPlant(ObjectData data)

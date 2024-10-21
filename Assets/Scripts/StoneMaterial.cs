@@ -38,6 +38,7 @@ public class StoneMaterial : Material
 
         for (int i = 0; i < numColliders; i++)
         {
+            Debug.Log(numColliders);
             colliders[i].attachedRigidbody.AddExplosionForce(explosionForce, transform.position, explosionRadius);
         }
 

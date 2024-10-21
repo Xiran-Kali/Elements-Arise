@@ -8,5 +8,6 @@ public class FireSpell : Spell
     {
         base.Catch(data);
         data.Material.OnFire(data);
+        data.Material.Burning(data);
     }
 }

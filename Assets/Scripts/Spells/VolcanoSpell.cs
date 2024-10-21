@@ -8,5 +8,6 @@ public class VolcanoSpell : Spell
     {
         base.Catch(data);
         data.Material.OnVolcano(data);
+        data.Material.Burning(data);
     }
 }
