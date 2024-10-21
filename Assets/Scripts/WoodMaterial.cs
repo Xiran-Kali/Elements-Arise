@@ -36,7 +36,7 @@ public class WoodMaterial : Material
         
     }
 
-    protected override void OnPlant()
+    protected override void OnPlant(ObjectData data)
     {
         if (!isBurning)
         {
@@ -44,7 +44,7 @@ public class WoodMaterial : Material
         }
     }
 
-    protected override void OnIce()
+    protected override void OnIce(ObjectData data)
     {
         isGrowing = false;
     }
