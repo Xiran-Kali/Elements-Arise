@@ -26,17 +26,18 @@ public class WoodMaterial : Material
             }
         
         }
-
+        gameObject.transform.localScale = scaling * gameObject.transform.lossyScale;
     
     }
 
 
-    private void Burning()
+    public override void Burning(ObjectData data)
     {
-        
+        base.Burning(data);
+        isBurning = true;
     }
 
-    protected override void OnPlant()
+    public override void OnPlant(ObjectData data)
     {
         if (!isBurning)
         {
@@ -44,7 +45,7 @@ public class WoodMaterial : Material
         }
     }
 
-    protected override void OnIce()
+    public override void OnIce(ObjectData data)
     {
         isGrowing = false;
     }

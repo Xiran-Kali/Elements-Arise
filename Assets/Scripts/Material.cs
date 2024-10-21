@@ -7,55 +7,55 @@ public class Material : MonoBehaviour
     protected bool conductivite;
     protected float mass_multiplier;
 
-    protected virtual void OnFire()
+    public virtual void OnFire(ObjectData data)
     {
 
     }
 
-    protected virtual void OnWater()
+    public virtual void OnWater(ObjectData data)
     {
 
     }
-    protected virtual void OnEarth()
+    public virtual void OnEarth(ObjectData data)
     {
 
     }
-    protected virtual void OnWind()
+    public virtual void OnWind(ObjectData data)
     {
 
     }
-    protected virtual void OnSteam()
+    public virtual void OnSteam(ObjectData data)
     {
 
     }
-    protected virtual void OnVolcano()
+    public virtual void OnVolcano(ObjectData data)
     {
 
     }
-    protected virtual void OnThunder()
+    public virtual void OnThunder(ObjectData data)
     {
 
     }
-    protected virtual void OnPlant()
+    public virtual void OnPlant(ObjectData data)
     {
 
     }
-    protected virtual void OnIce()
-    {
-
-    }
-
-    protected virtual void OnSand()
+    public virtual void OnIce(ObjectData data)
     {
 
     }
 
-    protected virtual void Burning()
+    public virtual void OnSand(ObjectData data)
     {
 
     }
 
-    protected virtual bool Frozen()
+    public virtual void Burning(ObjectData data)
+    {
+
+    }
+
+    public virtual bool Frozen(ObjectData data)
     {
         return false;
     }

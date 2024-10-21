@@ -19,8 +19,12 @@ public class ObjectData : MonoBehaviour
     [SerializeField]
     private float mass;
 
+    [SerializeField] Material material;
+    public Material Material { get { return material; } set { material = value; } }
+
 
     public bool electrified;
+
 
 
     private void OnTriggerEnter(Collider other)
@@ -30,7 +34,7 @@ public class ObjectData : MonoBehaviour
 
         if (spell != null)
         {
-            Debug.Log("truc");
+            spell.Catch(this);
         }
 
 

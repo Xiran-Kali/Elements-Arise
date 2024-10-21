@@ -9,8 +9,7 @@ public class Spell : MonoBehaviour
     [SerializeField] private float speed;
 
 
-    public void Catch(ObjectData data)
+    public virtual void Catch(ObjectData data)
     {
-
     }
 }
