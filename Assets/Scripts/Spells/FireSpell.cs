@@ -6,6 +6,7 @@ public class FireSpell : Spell
 {
     public override void Catch(ObjectData data)
     {
+        base.Catch(data);
         data.Material.OnFire(data);
     }
 }

@@ -11,5 +11,7 @@ public class Spell : MonoBehaviour
 
     public virtual void Catch(ObjectData data)
     {
+        data.Temperature += temperature;
+        data.Humidity += humidity;
     }
 }
