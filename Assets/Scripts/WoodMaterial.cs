@@ -49,8 +49,22 @@ public class WoodMaterial : Material
 
     public override void OnIce(ObjectData data)
     {
+        base.OnIce(data);
         isGrowing = false;
+        if (data.Humidity > 0 || data.Temperature < 1)
+        {
+            isBurning = false;
+        }
+
     }
 
+    public override void OnWater(ObjectData data)
+    {
+        base.OnWater(data);
+        if (data.Humidity > 0 || data.Temperature < 1)
+        {
+            isBurning = false;
+        }
+    }
 
 }
