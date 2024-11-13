@@ -12,6 +12,8 @@ public class WoodMaterial : Material
 
     private void Update()
     {
+        transform.rotation = Quaternion.identity;
+
         if (isGrowing && scaling < maxScaling)
         {
             scaling += Time.deltaTime;
